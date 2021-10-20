@@ -1,13 +1,16 @@
 
 * {
-    margin: 0; 
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
-body {
-    background-color: rgb(40, 40, 40);
-}
 table {
     border-collapse: collapse;
+    border-spacing: 0;
     position: absolute;
 	z-index: 1;
 	top: 50%;
@@ -17,17 +20,16 @@ table {
 
 td {
     border: 1px solid rgb(40, 40, 40);
-    width: 10px; 
-    height: 10px;
+    width: 16px; 
+    height: 16px;
 }
-
 
 .alive {
     background-color: rgb(20, 20, 255);
 }
 
 .dead {
-    background-color: rgb(60, 60, 60)
+    background-color: lightgray;
 }
 .play {
     font-family: 'Helvetica Neue', 'Helvetica', sans-serif;

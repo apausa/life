@@ -1,6 +1,6 @@
 let [first, second] = [[], []];
-let [interval, status] = [null, false];
-const [row, column] = [50, 50];
+let [interval, state] = [null, false];
+const [row, column] = [32, 32];
 
 class Life {
   constructor() {
@@ -78,13 +78,13 @@ cells.forEach((cell) => {
 });
 
 play.addEventListener('click', () => {
-  if (status === false) {
-    status = true;
+  if (state === false) {
+    state = true;
     interval = setInterval(() => {
       life.computer();
     }, 100);
   } else {
-    status = false;
+    state = false;
     clearInterval(interval);
   }
 });
