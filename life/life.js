@@ -1,19 +1,20 @@
 
 class Life {
     constructor() { 
-        let table = document.querySelector('table');
+        first = this.matrix();
+        second = this.matrix();
+        this.displayInHtml();
+    }
+    displayInHtml
+    matrix() {
+        let array = []; 
         for (let x = 0; x <= row; x++) {
-            let tr = document.createElement('tr'); 
-            [first[x], second[x]] = [[], []]
+            array[x] = [];
             for (let y = 0; y <= column; y++) {
-                let td = document.createElement('td');
-                td.setAttribute('id', `${x}-${y}`);
-                td.setAttribute('class', `dead`);
-                [first[x][y], second[x][y]] = [0, 0];
-                tr.appendChild(td);
+                array[x][y] = 0; 
             }
-            table.appendChild(tr);
         }
+        return array;
     }
     user(cell) {
         this.cell = cell; 
@@ -56,6 +57,9 @@ class Life {
         neighbours += (first[x + 1][y + 1] === 1) ? 1 : 0; // Bottom right. 
         return neighbours;
     }
+
+    //Execute. 
+
 }
 
 let [first, second] = [[], []];
