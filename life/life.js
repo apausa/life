@@ -59,7 +59,7 @@ class Life {
 }
 
 let [first, second] = [[], []];
-let [interval, status] = [null, false];  
+let [interval, stat] = [null, false];  
 const [row, column] = [50, 50];
 const life = new Life();
 const cell = document.querySelectorAll("td");
@@ -70,15 +70,14 @@ cell.forEach((cell) => {
         life.user(cell);
     })
 })
-
 play.addEventListener("click", () => {
-    if (status === false) {
-        status = true; 
+    if (stat === false) {
+        stat = true; 
         interval = setInterval(() => {
             life.computer(); 
         }, 100);
     } else {
-        status = false;
+        stat = false;
         clearInterval(interval);
     }
 });
