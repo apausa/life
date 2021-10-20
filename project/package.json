@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "John Conway's Game of Life on Vanilla JavaScript.",
   "main": "index.js",
-  "scripts": {
-    "test": "jest --watchAll --collect-coverage"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/apausa/life.git"
