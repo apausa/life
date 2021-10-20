@@ -4,11 +4,8 @@ class Life {
         first = this.matrix();
         second = this.matrix();
         this.displayInHtml();
-
     }
-
     displayInHtml
-
     matrix() {
         let array = []; 
         for (let x = 0; x <= row; x++) {
@@ -19,14 +16,12 @@ class Life {
         }
         return array;
     }
-
     user(cell) {
         this.cell = cell; 
         let [x, y] = this.cell.id.split("-");
         if (first[x][y] === 0) return this.isAlive(first, x, y); 
         return this.isDead(first, x, y); 
     }
-
     computer() {
         for (let x = 1; x < row; x++) {
             for (let y = 1; y < column; y++) {
@@ -37,21 +32,18 @@ class Life {
         }
         return [first, second] = [second, first];
     }
-
     isAlive(array, x, y) { // Closure function. 
         [this.array, this.x, this.y] = [array, x, y];
         let cell = document.getElementById(`${this.x}-${this.y}`);
         cell.setAttribute('class', 'alive');  
         return this.array[this.x][this.y] = 1; 
     }
-
     isDead(array, x, y) { // Closure function. 
         [this.array, this.x, this.y] = [array, x, y];
         let cell = document.getElementById(`${this.x}-${this.y}`); 
         cell.setAttribute('class', 'dead');
         return this.array[this.x][this.y] = 0; 
     }
-
     find(array, x, y) { // Closure function. 
         [this.array, this.x, this.y] = [array, x, y];
         let neighbours = 0;
@@ -71,7 +63,7 @@ class Life {
 }
 
 let [first, second] = [[], []];
-let [interval, status] = [null, false];  
+let [interval, stat] = [null, false];  
 const [row, column] = [50, 50];
 const life = new Life();
 const cell = document.querySelectorAll("td");
@@ -82,18 +74,14 @@ cell.forEach((cell) => {
         life.user(cell);
     })
 })
-
 play.addEventListener("click", () => {
-    if (status === false) {
-        status = true; 
+    if (stat === false) {
+        stat = true; 
         interval = setInterval(() => {
             life.computer(); 
         }, 100);
     } else {
-        status = false;
+        stat = false;
         clearInterval(interval);
     }
 });
-
-
-//CÓMO SE INDICAN POSICIONES EN CANVAS? 
