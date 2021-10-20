@@ -1,0 +1,22 @@
+{
+  "name": "life",
+  "version": "1.0.0",
+  "description": "John Conway's Game of Life on Vanilla JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll --collect-coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apausa/life.git"
+  },
+  "author": "@apausa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apausa/life/issues"
+  },
+  "homepage": "https://github.com/apausa/life#readme",
+  "dependencies": {
+    "jest": "^27.3.1"
+  }
+}
