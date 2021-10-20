@@ -1,32 +1,26 @@
 
 class Life {
     constructor() { 
-        first = this.matrix();
-        second = this.matrix();
-        this.displayInHtml();
-
-    }
-
-    displayInHtml
-
-    matrix() {
-        let array = []; 
+        let table = document.querySelector('table');
         for (let x = 0; x <= row; x++) {
-            array[x] = [];
+            let tr = document.createElement('tr'); 
+            [first[x], second[x]] = [[], []]
             for (let y = 0; y <= column; y++) {
-                array[x][y] = 0; 
+                let td = document.createElement('td');
+                td.setAttribute('id', `${x}-${y}`);
+                td.setAttribute('class', `dead`);
+                [first[x][y], second[x][y]] = [0, 0];
+                tr.appendChild(td);
             }
+            table.appendChild(tr);
         }
-        return array;
     }
-
     user(cell) {
         this.cell = cell; 
         let [x, y] = this.cell.id.split("-");
         if (first[x][y] === 0) return this.isAlive(first, x, y); 
         return this.isDead(first, x, y); 
     }
-
     computer() {
         for (let x = 1; x < row; x++) {
             for (let y = 1; y < column; y++) {
@@ -37,21 +31,18 @@ class Life {
         }
         return [first, second] = [second, first];
     }
-
     isAlive(array, x, y) { // Closure function. 
         [this.array, this.x, this.y] = [array, x, y];
         let cell = document.getElementById(`${this.x}-${this.y}`);
         cell.setAttribute('class', 'alive');  
         return this.array[this.x][this.y] = 1; 
     }
-
     isDead(array, x, y) { // Closure function. 
         [this.array, this.x, this.y] = [array, x, y];
         let cell = document.getElementById(`${this.x}-${this.y}`); 
         cell.setAttribute('class', 'dead');
         return this.array[this.x][this.y] = 0; 
     }
-
     find(array, x, y) { // Closure function. 
         [this.array, this.x, this.y] = [array, x, y];
         let neighbours = 0;
@@ -65,9 +56,6 @@ class Life {
         neighbours += (first[x + 1][y + 1] === 1) ? 1 : 0; // Bottom right. 
         return neighbours;
     }
-
-    //Execute. 
-
 }
 
 let [first, second] = [[], []];
@@ -94,6 +82,3 @@ play.addEventListener("click", () => {
         clearInterval(interval);
     }
 });
-
-
-//CÓMO SE INDICAN POSICIONES EN CANVAS? 
