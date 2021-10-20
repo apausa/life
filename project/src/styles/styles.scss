@@ -1,0 +1,96 @@
+@import "./variables";
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+    background-color: $neutralC;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 64px;
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        td {
+            border: 1px solid $neutralC;
+            width: 15px; 
+            height: 15px;
+        }
+    }
+}
+
+// Table's rounded borders. 
+
+tr:first-child {
+    td:first-child {
+        border-top-left-radius: $module;
+    }
+}
+tr:first-child {
+    td:last-child {
+        border-top-right-radius: $module;
+    }
+}
+tr:last-child {
+    td:first-child {
+        border-bottom-left-radius: $module;
+    }
+}
+tr:last-child {
+    td:last-child {
+        border-bottom-right-radius: $module;
+    }
+}
+
+// When is on.
+
+.on {
+    button {
+        background-color: $warmGray8C;
+        width: 33px; 
+        height: 33px;
+        border-radius: 8px;
+        position: relative;
+        z-index: 1;
+        bottom:513px;
+        left: $module;
+    }
+    .alive {
+        background-color: $blue07C;
+    }
+    .dead {
+        background-color: $warmGray2C;
+    }
+}
+
+// When is off.
+
+.off {
+    button {
+        background-color: $blue07C;
+        width: 33px; 
+        height: 33px;
+        border-radius: 8px;
+        position: relative;
+        z-index: 1;
+        bottom:513px;
+        left: $module;
+    }
+    .alive {
+        background-color: $warmGray8C;
+    }
+    .dead:hover {
+        background-color: $warmGray4C;
+    }
+    .dead {
+        background-color: $warmGray2C;
+    }
+}

@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git+https://github.com/apausa/life.git"
   },
+  "scripts": {
+    "css": "node-sass --include-path scss src/styles/styles.scss src/styles/styles.css",
+    "watch": "nodemon -e scss -x 'npm run css'"
+  },
   "author": "@apausa",
   "license": "ISC",
   "bugs": {
@@ -16,7 +20,9 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.25.2"
+    "eslint-plugin-import": "^2.25.2",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.14"
   },
   "dependencies": {
     "scss": "^0.2.4"

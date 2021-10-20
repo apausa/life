@@ -69,21 +69,24 @@ class Life {
 
 const life = new Life();
 const cells = document.querySelectorAll('td');
-const play = document.querySelector('.play');
+const button = document.querySelector('button');
 
+const main = document.querySelector('main');
 cells.forEach((cell) => {
   cell.addEventListener('click', () => {
     life.user(cell);
   });
 });
 
-play.addEventListener('click', () => {
+button.addEventListener('click', () => {
   if (state === false) {
+    main.setAttribute('class', 'on');
     state = true;
     interval = setInterval(() => {
       life.computer();
-    }, 100);
+    }, 200);
   } else {
+    main.setAttribute('class', 'off');
     state = false;
     clearInterval(interval);
   }
