@@ -15,10 +15,11 @@ body {
   transform: translate(-50%, -50%); }
   body table {
     border-collapse: collapse;
-    border-spacing: 0; }
+    border-spacing: 0;
+    table-layout: fixed; }
     body table td {
       border: 1px solid #222;
-      width: 15px;
+      min-width: 15px;
       height: 15px; }
 
 tr:first-child td:first-child {
