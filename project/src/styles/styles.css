@@ -49,9 +49,6 @@ tr:last-child td:last-child {
   bottom: 673px;
   left: 16px; }
 
-.on button:hover {
-  background-color: #222222; }
-
 .on .alive {
   background-color: #000F9F; }
 
