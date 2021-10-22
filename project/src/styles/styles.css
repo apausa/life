@@ -7,64 +7,72 @@
   vertical-align: baseline; }
 
 body {
-  background-color: #222;
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-  body table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    table-layout: fixed; }
-    body table td {
-      border: 1px solid #222;
-      min-width: 15px;
-      height: 15px; }
+  width: 50vw;
+  margin: 0 auto;
+  background-color: #222222; }
+  body h1 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 32px;
+    color: #D0CFCD;
+    font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed; }
+  table td {
+    border: 1px solid #222222;
+    min-width: 15px;
+    height: 15px; }
 
 tr:first-child td:first-child {
-  border-top-left-radius: 16px; }
+  border-top-left-radius: 8px; }
 
 tr:first-child td:last-child {
-  border-top-right-radius: 16px; }
+  border-top-right-radius: 8px; }
 
 tr:last-child td:first-child {
-  border-bottom-left-radius: 16px; }
+  border-bottom-left-radius: 8px; }
 
 tr:last-child td:last-child {
-  border-bottom-right-radius: 16px; }
+  border-bottom-right-radius: 8px; }
 
 .on button {
-  background-color: #8C827A;
+  border-radius: 8px;
+  background-color: #54565A;
   width: 33px;
   height: 33px;
-  border-radius: 8px;
   position: relative;
   z-index: 1;
-  bottom: 513px;
+  bottom: 673px;
   left: 16px; }
+
+.on button:hover {
+  background-color: #222222; }
 
 .on .alive {
   background-color: #000F9F; }
 
 .on .dead {
-  background-color: #CBC3BB; }
+  background-color: #D0CFCD; }
 
 .off button {
+  border-radius: 8px;
   background-color: #000F9F;
   width: 33px;
   height: 33px;
-  border-radius: 8px;
   position: relative;
   z-index: 1;
-  bottom: 513px;
+  bottom: 673px;
   left: 16px; }
 
 .off .alive {
-  background-color: #8C827A; }
+  background-color: #54565A; }
 
 .off .dead:hover {
-  background-color: #B5ADA5; }
+  background-color: #98989A; }
 
 .off .dead {
-  background-color: #CBC3BB; }
+  background-color: #D0CFCD; }

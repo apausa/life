@@ -1,6 +1,6 @@
 let [first, second] = [[], []];
 let [interval, state] = [null, false];
-const [row, column] = [32, 32];
+const [row, column] = [42, 44];
 
 class Life {
   constructor() {
@@ -74,6 +74,12 @@ const button = document.querySelector('button');
 const main = document.querySelector('main');
 cells.forEach((cell) => {
   cell.addEventListener('click', () => {
+    if (state === true) {
+      main.setAttribute('class', 'off');
+      state = false;
+      clearInterval(interval);
+      return;
+    }
     life.user(cell);
   });
 });

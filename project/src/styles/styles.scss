@@ -10,12 +10,17 @@
 }
 
 body {
-    position: absolute;
-	z-index: 1;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+    width: 50vw;
+    margin: 0 auto;
     background-color: $pantoneNeutralBlackC;
+    h1 {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        font-family: 'Helvetica Neue', Helvetica, sans-serif;
+        font-size: 32px;
+        color: $pantoneCoolGray2C;
+        font-weight: bold;
+    }
 }
 
 table {
@@ -33,22 +38,22 @@ table {
 
 tr:first-child {
     td:first-child {
-        border-top-left-radius: $module;
+        border-top-left-radius: 8px;
     }
 }
 tr:first-child {
     td:last-child {
-        border-top-right-radius: $module;
+        border-top-right-radius: 8px;
     }
 }
 tr:last-child {
     td:first-child {
-        border-bottom-left-radius: $module;
+        border-bottom-left-radius: 8px;
     }
 }
 tr:last-child {
     td:last-child {
-        border-bottom-right-radius: $module;
+        border-bottom-right-radius: 8px;
     }
 }
 
@@ -56,14 +61,17 @@ tr:last-child {
 
 .on {
     button {
+        border-radius: 8px;
         background-color: $pantoneCoolGray11C;
         width: 33px; 
         height: 33px;
-        border-radius: 8px;
         position: relative;
         z-index: 1;
-        bottom:513px;
+        bottom:673px;
         left: $module;
+    }
+    button:hover {
+        background-color: $pantoneNeutralBlackC;
     }
     .alive {
         background-color: $pantoneBlue072C;
@@ -77,13 +85,13 @@ tr:last-child {
 
 .off {
     button {
+        border-radius: 8px;
         background-color: $pantoneBlue072C;
         width: 33px; 
         height: 33px;
-        border-radius: 8px;
         position: relative;
         z-index: 1;
-        bottom:513px;
+        bottom:673px;
         left: $module;
     }
     .alive {
