@@ -1,3 +1,3 @@
 # Game of Life
 
-John Conway's Game of Life. Made with Vanilla JavaScript and SCSS.
+John Conway's Game of Life, made with Vanilla JavaScript and SCSS.
