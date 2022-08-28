@@ -1,3 +1,3 @@
 # Life
 
-John Conway's Game of Life. Frontend application built in Vanilla JavaScript and SCSS.
+John Conway's Game of Life built in Vanilla JavaScript and SCSS.
